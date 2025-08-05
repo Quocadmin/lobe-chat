@@ -974,3 +974,64 @@ This project is [Apache 2.0](./LICENSE) licensed.
 [vercel-link]: https://chat-preview.lobehub.com
 [vercel-shield]: https://img.shields.io/badge/vercel-online-55b467?labelColor=black&logo=vercel&style=flat-square
 [vercel-shield-badge]: https://img.shields.io/badge/TRY%20LOBECHAT-ONLINE-55b467?labelColor=black&logo=vercel&style=for-the-badge
+
+1. Lobe Chat là gì?
+Lobe Chat là một nền tảng mã nguồn mở (open-source) cho phép bạn tự tạo ứng dụng chat AI như ChatGPT, Gemini, Claude... với giao diện hiện đại, nhiều tính năng mạnh mẽ, dễ mở rộng và hoàn toàn miễn phí.
+
+Bạn có thể tự triển khai (deploy) ứng dụng này cho riêng mình chỉ với 1 click – không cần kiến thức lập trình nâng cao.
+
+2. Dành cho ai?
+Người dùng bình thường muốn có chatbot AI riêng tư, bảo mật, không bị giới hạn.
+
+Developer/lập trình viên muốn tích hợp AI vào hệ thống hoặc phát triển thêm plugin, tính năng mới.
+
+Doanh nghiệp, đội nhóm cần nền tảng chat AI tùy biến theo nhu cầu.
+
+3. Các tính năng nổi bật
+Hỗ trợ đa mô hình AI: OpenAI GPT, Claude, Gemini, Groq, Ollama, Huggingface, Google... Bạn chọn mô hình nào cũng được.
+
+Plugin & Marketplace: Có thể cài thêm các plugin (tiện ích mở rộng) giúp chatbot kết nối với bên ngoài, ví dụ tìm kiếm web, upload file, tra cứu tài liệu...
+
+Hỗ trợ đa nền tảng: Dùng trên web, desktop, mobile, có app PWA (cài lên màn hình như app thật).
+
+Nhánh hội thoại (Branching): Tạo nhiều nhánh chat song song với AI, tiện cho việc so sánh ý tưởng, trao đổi nhóm.
+
+Lưu trữ tri thức cá nhân: Upload file (Word, PDF, ảnh, video...) để chatbot có thể “học” và trả lời dựa trên kiến thức cá nhân.
+
+Hỗ trợ giọng nói: Nhận diện giọng nói (Speech-to-Text), tổng hợp giọng nói (Text-to-Speech), nói chuyện trực tiếp với chatbot.
+
+Tùy chỉnh giao diện, chủ đề màu sắc.
+
+Hỗ trợ nhiều người dùng, quản lý tài khoản (multi-user).
+
+Hỗ trợ tự lưu trữ dữ liệu: Có thể lưu trữ trên máy chủ riêng hoặc trên cloud, bảo vệ quyền riêng tư.
+
+4. Hướng dẫn triển khai nhanh
+Bạn có thể tự triển khai chatbot này miễn phí lên các nền tảng phổ biến (Vercel, Zeabur, Docker, Alibaba Cloud...), chỉ cần có API key từ OpenAI hoặc các nhà cung cấp AI.
+
+Chỉ 1 click là có ngay website chatbot AI của riêng bạn, không cần server, không cần cài đặt phức tạp.
+
+Có thể gán tên miền riêng cho chatbot.
+
+Tất cả dữ liệu chat có thể lưu ngay trên trình duyệt hoặc server của bạn.
+
+5. Vì sao nên dùng Lobe Chat?
+Miễn phí, mở rộng không giới hạn, không bị kiểm duyệt, không giới hạn số lượng câu hỏi như các web AI công cộng.
+
+Tùy chỉnh giao diện hiện đại, dễ dùng, nhiều theme, trải nghiệm tốt trên mọi thiết bị.
+
+Bảo mật riêng tư tối đa (dữ liệu của bạn là của bạn, không bị nhà phát triển đọc được).
+
+Cộng đồng mạnh, có Marketplace cho plugin, agent, tài liệu hướng dẫn đầy đủ.
+
+6. Bắt đầu như thế nào?
+Fork repo trên GitHub (bạn vừa làm xong bước này rồi!)
+
+Triển khai lên nền tảng bạn thích theo hướng dẫn trong README (Vercel là đơn giản nhất).
+
+Lấy API key OpenAI, điền vào khi cài đặt.
+
+Vào website đã triển khai, bắt đầu chat thử với AI thôi!
+
+📌 Tóm lại:
+Lobe Chat là nền tảng tạo chatbot AI đa năng, miễn phí, bảo mật, mở rộng linh hoạt – giúp bạn làm chủ chatbot AI của riêng mình thay vì phải phụ thuộc vào dịch vụ bên ngoài.
