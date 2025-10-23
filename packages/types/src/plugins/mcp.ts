@@ -1,8 +1,23 @@
 import { PluginQueryParams, SystemDependency } from '@lobehub/market-sdk';
+import { z } from 'zod';
 
 import { MCPErrorType } from '@/libs/mcp';
-import { MCPInstallStep } from '@/store/tool/slices/mcpStore';
 
+import { CustomPluginMetadata } from '../tool/plugin';
+
+/* eslint-disable typescript-sort-keys/string-enum */
+export enum MCPInstallStep {
+  FETCHING_MANIFEST = 'FETCHING_MANIFEST',
+  CHECKING_INSTALLATION = 'CHECKING_INSTALLATION',
+  DEPENDENCIES_REQUIRED = 'DEPENDENCIES_REQUIRED',
+  GETTING_SERVER_MANIFEST = 'GETTING_SERVER_MANIFEST',
+  CONFIGURATION_REQUIRED = 'CONFIGURATION_REQUIRED',
+  INSTALLING_PLUGIN = 'INSTALLING_PLUGIN',
+  COMPLETED = 'COMPLETED',
+  ERROR = 'Error',
+}
+
+/* eslint-enable */
 export interface CheckMcpInstallParams {
   /**
    * 安装详情
@@ -181,4 +196,56 @@ export interface MCPInstallProgress {
   }>;
 }
 
+export interface McpConnection {
+  args?: string[];
+  auth?: {
+    accessToken?: string;
+    token?: string;
+    type: 'none' | 'bearer' | 'oauth2';
+  };
+  // STDIO 连接参数
+  command?: string;
+  env?: Record<string, string>;
+  headers?: Record<string, string>;
+  type: 'http' | 'stdio';
+  // HTTP 连接参数
+  url?: string;
+}
+
+// 测试连接参数类型
+export interface McpConnectionParams {
+  connection: McpConnection;
+  identifier: string;
+  metadata?: CustomPluginMetadata;
+}
+
 export type MCPInstallProgressMap = Record<string, MCPInstallProgress | undefined>;
+
+// ============ Zod Schemas ============
+
+/**
+ * Zod schema for HTTP MCP authentication
+ */
+export const StreamableHTTPAuthSchema = z
+  .object({
+    accessToken: z.string().optional(), // OAuth2 Access Token
+    token: z.string().optional(), // Bearer Token
+    type: z.enum(['none', 'bearer', 'oauth2']),
+  })
+  .optional();
+
+/**
+ * Zod schema for getStreamableMcpServerManifest input
+ */
+export const GetStreamableMcpServerManifestInputSchema = z.object({
+  auth: StreamableHTTPAuthSchema,
+  headers: z.record(z.string()).optional(),
+  identifier: z.string(),
+  metadata: z
+    .object({
+      avatar: z.string().optional(),
+      description: z.string().optional(),
+    })
+    .optional(),
+  url: z.string().url(),
+});

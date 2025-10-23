@@ -255,6 +255,7 @@ LobeChat 支持文件上传与知识库功能，你可以上传文件、图片�
 - **[GitHub](https://lobechat.com/discover/provider/github)**: 通过 GitHub 模型，开发人员可以成为 AI 工程师，并使用行业领先的 AI 模型进行构建。
 - **[Novita](https://lobechat.com/discover/provider/novita)**: Novita AI 是一个提供多种大语言模型与 AI 图像生成的 API 服务的平台，灵活、可靠且具有成本效益。它支持 Llama3、Mistral 等最新的开源模型，并为生成式 AI 应用开发提供了全面、用户友好且自动扩展的 API 解决方案，适合 AI 初创公司的快速发展。
 - **[PPIO](https://lobechat.com/discover/provider/ppio)**: PPIO 派欧云提供稳定、高性价比的开源模型 API 服务，支持 DeepSeek 全系列、Llama、Qwen 等行业领先大模型。
+- **[302.AI](https://lobechat.com/discover/provider/ai302)**: 302.AI 是一个按需付费的 AI 应用平台，提供市面上最全的 AI API 和 AI 在线应用
 - **[Together AI](https://lobechat.com/discover/provider/togetherai)**: Together AI 致力于通过创新的 AI 模型实现领先的性能，提供广泛的自定义能力，包括快速扩展支持和直观的部署流程，满足企业的各种需求。
 - **[Fireworks AI](https://lobechat.com/discover/provider/fireworksai)**: Fireworks AI 是一家领先的高级语言模型服务商，专注于功能调用和多模态处理。其最新模型 Firefunction V2 基于 Llama-3，优化用于函数调用、对话及指令跟随。视觉语言模型 FireLLaVA-13B 支持图像和文本混合输入。其他 notable 模型包括 Llama 系列和 Mixtral 系列，提供高效的多语言指令跟随与生成支持。
 - **[Groq](https://lobechat.com/discover/provider/groq)**: Groq 的 LPU 推理引擎在最新的独立大语言模型（LLM）基准测试中表现卓越，以其惊人的速度和效率重新定义了 AI 解决方案的标准。Groq 是一种即时推理速度的代表，在基于云的部署中展现了良好的性能。
@@ -283,7 +284,6 @@ LobeChat 支持文件上传与知识库功能，你可以上传文件、图片�
 - **[Search1API](https://lobechat.com/discover/provider/search1api)**: Search1API 提供可根据需要自行联网的 DeepSeek 系列模型的访问，包括标准版和快速版本，支持多种参数规模的模型选择。
 - **[InfiniAI](https://lobechat.com/discover/provider/infiniai)**: 为应用开发者提供高性能、易上手、安全可靠的大模型服务，覆盖从大模型开发到大模型服务化部署的全流程。
 - **[Qiniu](https://lobechat.com/discover/provider/qiniu)**: 七牛作为老牌云服务厂商，提供高性价比稳定的实时、批量 AI 推理服务，简单易用。
-- **[302.AI](https://lobechat.com/discover/provider/ai302)**:
 
 </details>
 
@@ -377,12 +377,12 @@ LobeChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 | 最近新增                                                                                                                   | 描述                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [PortfolioMeta](https://lobechat.com/discover/plugin/StockData)<br/><sup>By **portfoliometa** on **2025-07-21**</sup>      | 分析股票并获取全面的实时投资数据和分析。<br/>`股票`                                |
-| [Speak](https://lobechat.com/discover/plugin/speak)<br/><sup>By **speak** on **2025-07-18**</sup>                          | 使用 Speak，您的 AI 语言导师，学习如何用另一种语言说任何事情。<br/>`教育` `语言`   |
+| [PortfolioMeta](https://lobechat.com/discover/plugin/StockData)<br/><sup>By **portfoliometa** on **2025-09-27**</sup>      | 分析股票并获取全面的实时投资数据和分析。<br/>`股票`                                |
 | [网页](https://lobechat.com/discover/plugin/web)<br/><sup>By **Proghit** on **2025-01-24**</sup>                           | 智能网页搜索，读取和分析页面，以提供来自 Google 结果的全面答案。<br/>`网页` `搜索` |
 | [必应网页搜索](https://lobechat.com/discover/plugin/Bingsearch-identifier)<br/><sup>By **FineHow** on **2024-12-22**</sup> | 通过 BingApi 搜索互联网上的信息<br/>`bingsearch`                                   |
+| [谷歌自定义搜索引擎](https://lobechat.com/discover/plugin/google-cse)<br/><sup>By **vsnthdev** on **2024-12-02**</sup>     | 通过他们的官方自定义搜索引擎 API 搜索谷歌。<br/>`网络` `搜索`                      |
 
-> 📊 Total plugins: [<kbd>**43**</kbd>](https://lobechat.com/discover/plugins)
+> 📊 Total plugins: [<kbd>**42**</kbd>](https://lobechat.com/discover/plugins)
 
  <!-- PLUGIN LIST -->
 
@@ -840,7 +840,7 @@ $ pnpm run dev
 </details>
 
 Copyright © 2025 [LobeHub][profile-link]. <br />
-This project is [Apache 2.0](./LICENSE) licensed.
+This project is [LobeHub Community License](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
@@ -923,7 +923,7 @@ This project is [Apache 2.0](./LICENSE) licensed.
 [github-release-shield]: https://img.shields.io/github/v/release/lobehub/lobe-chat?color=369eff&labelColor=black&logo=github&style=flat-square
 [github-releasedate-link]: https://github.com/lobehub/lobe-chat/releases
 [github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/lobe-chat?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/lobehub/lobe-chat/network/stargazers
+[github-stars-link]: https://github.com/lobehub/lobe-chat/stargazers
 [github-stars-shield]: https://img.shields.io/github/stars/lobehub/lobe-chat?color=ffcb47&labelColor=black&style=flat-square
 [github-trending-shield]: https://trendshift.io/api/badge/repositories/2256
 [github-trending-url]: https://trendshift.io/repositories/2256
